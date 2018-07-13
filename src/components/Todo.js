@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 const Todo = ({ onClick, completed, text }) => (
   <li
     onClick={onClick}
+    className={"list-group-item " + (completed ? 'disabled' : '')}
     style={{
       textDecoration: completed ? 'line-through' : 'none'
     }}

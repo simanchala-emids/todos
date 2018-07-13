@@ -14,9 +14,11 @@ const AddTodo = ({ dispatch }) => {
         }
         dispatch(addTodo(input.value))
         input.value = ''
-      }}>
-        <input ref={node => input = node} />
-        <button type="submit">
+      }} className="form-inline">
+        <div className="form-group mx-sm-3">
+          <input ref={node => input = node} className="form-control" />
+        </div>
+        <button type="submit" className="btn btn-primary">
           Add Todo
         </button>
       </form>
